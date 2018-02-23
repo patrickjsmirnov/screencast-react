@@ -6,27 +6,6 @@ class Article extends PureComponent {
     super(props);
   }
 
-  // shouldComponentUpdate(nextProps,nextState) {
-  //   return this.state.isOpen !== nextState.isOpen;
-  // }
-
-  componentWillMount() {
-    console.log('---', 'mounting');
-  }
-
-  // componentWillReceiveProps(nextProps) {
-  //   console.log('---', 'will receive props');
-  //   if (nextProps.defaultOpen !== this.props.defultOpen) {
-  //     this.setState({
-  //       isOpen: nextProps.defaultOpen
-  //     })
-  //   }
-  // }
-
-  componentWillUpdate() {
-    console.log('---', 'will update');
-  }
-
   render() {
     const {article, isOpen, onButtonClick} = this.props;
     const body = isOpen && <section>{article.text}</section>;
